@@ -1,0 +1,14 @@
+import requests
+import sys
+
+# Send a GET request to the website
+r = requests.get('https://www.placeholder.com')
+
+# Print the HTML
+print(r)
+print(r.status_code)
+print(r.content)
+
+# Result print out to separate notepad file
+# or get pandas or something similar to have it printed to excel
+sys.stdout = print(r.content)
